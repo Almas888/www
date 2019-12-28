@@ -1,0 +1,490 @@
+<!DOCTYPE html>
+<html>
+	<head>
+	<meta charset="utf-8">
+	<title>Django</title>
+	</head>
+
+
+<body>
+	<h1>1.Переменные</h1>
+	<img src="https://younglinux.info/sites/default/files/images/python/var_shem.gif"><br>
+	Переменная — это простейшая именованная структура данных, в которой может быть сохранён промежуточный или конечный результат работы программы.Данные хранятся в ячейках памяти компьютера. Когда мы вводим число, оно
+	помещается в память. Но как узнать, куда именно? Как в последствии обращаться к
+	этим данными? Раньше, при написании программ на машинном языке, обращение к
+	ячейкам памяти осуществляли с помощью указания регистров. Но уже с появлением
+	ассемблеров, при обращении к данным стали использовать так называемые
+	переменные. Механизм связи между переменными и данными может различаться в
+	зависимости от языка программирования и типа данных.Пока достаточно запомнить,что данные связываются с каким-либо именем и в дальнейшем обращение к ним
+	возможно по этому имени.
+
+
+	<h1>2.Типы данных</h1>
+	Данные в Python сгруппированы в различные категории,называемые <b>типами данных</b>.В Python каждое значение,например 2 или "Привет, мир!",называется <b>объектом</b>.Идентификатор объекта - это место,где он хранится в памяти компьютера,и оно никогда не меняется.Тип данных объекта - это категория данных,к которой принадлежит объект,она определяет свойства объекта и также никогда не меняется.Значение объекта - это данные,которые он представляет,например,число 2 имеет значение 2.<br>
+	⠀⠀⠀"Привет, мир!" - объект с типом данных <b>str</b>,сокращение от английского слова string - <b>строка</b>,и значением "Привет, мир!".Когда вы ссылаетесь на объект с типом данных str,то называете его строкой.Строка представляет собой последовательность из одного или нескольких символов,помещенных в кавычки.<b>Символ</b> - один знак,вроде a или 1.Вы можете использовать одинарные или двойные кавычки,но они должны быть одинаковыми в начале и в конце строки.
+
+
+	<h1>3.Изменение типов, функции int(), float() и str()</h1>
+	<b>Int:</b>тип данных целых чисел.<br>
+	<b>Float:</b>тип данных вещественных(чисел с десятой точкой).<br>
+	<b>Str:</b>тип данных строки.<br>
+	⠀Часто при программировании необходимо <b>увеличить</b> или <b>уменьшить</b> значение переменной.Поскольку это стандартная операция,у Python есть специальный синтаксис,позволяющий сокращать код.Чтобы увеличить значение переменной,назначьте переменную самой себе,а другую сторону от знака равенства прибавьте к этой переменной число,на которое вы хотите увеличить ее значение.<br>
+	<b>Пример:</b><br>
+	1.  x = 10<br>
+	2.  x = x + 1<br>
+	3.  print(x)<br>
+    >> 11<br>
+    ⠀Чтобы уменьшить значение переменной,сделайте то же самое,только теперь вычтите число,на которое вы хотите уменьшить значение переменной.<br>
+   <b>Пример:</b><br>
+    1.  x = 10<br>
+	2.  x = x - 1<br>
+	3.  print(x)<br>
+    >> 9<br>
+    ⠀Эти примеры совершенно верны,но существует более лаконичный способ увеличивать и уменьшать значения переменных,и лучше использовать его.<br>
+    <b>Примеры:</b><br>
+	1.  x = 10<br>
+	2.  x += 1<br>
+	3.  print(x)<br>
+    >> 11<br>
+
+    1.  x = 10<br>
+	2.  x -= 1<br>
+	3.  print(x)<br>
+    >> 9<br>
+
+    <h1>4.Вывод данных на экран - функция print(),
+    Ввод данных с клавиатуры - функция input()</h1><br>
+    Ввод данных в программу и их вывод важны в программировании. Без ввода программы делали бы одно и то же, исключая случаи, когда в них самих генерируются случайные значения. Вывод позволяет увидеть, использовать, передать дальше результат работы программы.
+
+	Обычно требуется, чтобы программа обрабатывала какой-то диапазон различных входных данных, которые поступают в нее из внешних источников. В качестве последних могут выступать файлы, клавиатура, сеть, выходные данные из другой программы. Вывод данных также возможен в файлы и др. Однако во многих случаях это происходит на экран монитора.
+
+	Можно сказать, что программа – это открытая система, которая обменивается чем-либо с внешней для нее средой. Если живой организм в основном обменивается веществом и энергией, то программа – данными, информацией.<br>
+	<h1>Вывод данных - Функция print()</h1>
+	Что такое функция в программировании, узнаем позже. Пока будем считать, что print() – это такая команда языка Python, которая выводит то, что в ее скобках на экран.<br>
+	<b>Пример:</b><br>
+	>>  print(1892)<br>
+	1892<br>
+	>>  print(HTML)<br>
+	HTML<br>
+	В скобках могут быть любые типы данных. Кроме того, количество данных может быть различным<br>
+	<b>Пример:</b><br>
+	>>  print("a:", 1)<br>
+	a: 1<br>
+	>>  one = 1<br>
+	>>  two = 2<br>
+	>>  three = 3<br>
+	>>  print(one, two, three)<br>
+	1 2 3<br>
+
+	Можно передавать в функцию print() как непосредственно литералы (в данном случае "a:" и 1), так и переменные, вместо которых будут выведены их значения. Аргументы функции (то, что в скобках), разделяются между собой запятыми. В выводе вместо запятых значения разделены пробелом.<br>
+	<br>
+	Если в скобках стоит выражение, то сначала оно выполняется, после чего print() уже выводит результат данного выражения<br>
+	<b>Пример:</b><br>
+	>>  print("Mon", "Tue", "Wed", "Thu", "Fri", "Sat", "Sun", sep="-")<br>
+	Mon-Tue-Wed-Thu-Fri-Sat-Sun<br>
+	>>  print(1, 2, 3, sep="//")<br>
+	1//2//3<br>
+
+	Параметр end позволяет указывать, что делать, после вывода строки. По-умолчанию происходит переход на новую строку. Однако это действие можно отменить, указав любой другой символ или строку<br>
+	<b>Пример:</b><br>
+	>> print(10, end="")<br>
+	10>><br>
+	Следующее, что стоит рассказать о функции print() – это использование форматирования строк. На самом деле это никакого отношения к print() не имеет, а применяется к строкам. Но обычно используется именно в сочетании с функцией print().<br>
+	<br>
+	Форматирование может выполняться в так называемом старом стиле или с помощью строкового метода format. Старый стиль также называют Си-стилем, так как он схож с тем, как происходит вывод на экран в языке C. Рассмотрим пример<br>
+	<b>Пример:</b><br>
+	>>  pupil = "Ben"<br>
+	>>  old = 16<br>
+	>>  grade = 9.2<br>
+	>>  print("It's %s, %d. Level: %f" % (pupil, old, grade))<br>
+	It's Ben, 16. Level: 9.200000<br>
+
+	<h1>Ввод данных-Функция input()</h1>
+	За ввод в программу данных с клавиатуры в Python отвечает функция input(). Когда вызывается эта функция, программа останавливает свое выполнение и ждет, когда пользователь введет текст. После этого, когда он нажмет Enter, функция input() заберет введенный текст и передаст его программе, которая уже будет обрабатывать его согласно своим алгоритмам.<br>
+	<br>
+	Если в интерактивном режиме ввести команду input(), то ничего интересного вы не увидите. Компьютер будет ждать, когда вы что-нибудь введете и нажмете Enter или просто нажмете Enter. Если вы что-то ввели, это сразу же отобразиться на экране<br>
+	<b>Пример:</b><br>
+
+	>>  input()<br>
+	Yes!<br>
+	'Yes!'<br>
+	<br>
+	Функция input() передает введенные данные в программу. Их можно присвоить переменной. В этом случае интерпретатор не выводит строку сразу же<br>
+	<b>Пример:</b><br>
+	>>  answer = input()<br>
+	No, it is not.<br>
+	<br>
+	В данном случае строка сохраняется в переменной answer, и при желании мы можем вывести ее значение на экран<br>
+	<b>Пример:</b><br>
+	>>  answer<br>
+    'No, it is not.'<br>
+    <br>
+    При использовании функции print() кавычки в выводе опускаются<br>
+    <b>Пример:</b><br>
+    >>> print(answer)<br>
+    No, it is not.<br>
+
+    <h1>5.Условные операторы if-elif-else</h1>
+    Ранее мы рассмотрели работу условного оператора if. С помощью его расширенной версии if-else можно реализовать две отдельные ветви выполнения. Однако алгоритм программы может предполагать выбор больше, чем из двух путей, например, из трех, четырех или даже пяти. В данном случае следует говорить о необходимости множественного ветвления.<br>
+    <br>
+    Рассмотрим конкретный пример. Допустим, в зависимости от возраста пользователя, ему рекомендуется определенный видеоконтент. При этом выделяют группы от 3 до 6 лет, от 6 до 12, от 12 до 16, 16+. Итого 4 диапазона. Как бы мы стали реализовывать задачу, имея в наборе инструментов только конструкцию if-else?<br>
+    <br>
+    Самый простой ответ – последовательно проверять вхождение введенного числа-возраста в определенный диапазон с помощью следующих друг за другом условных операторов<br>
+    <b>Пример:</b><br>
+    old = int(input('Ваш возраст: '))<br>
+ 	<br>
+	print('Рекомендовано:', end=' ')<br>
+ 	<br>
+	if 3 <= old < 6:<br>
+    ⠀⠀⠀print('"Заяц в лабиринте"')<br>
+ 	<br>
+	if 6 <= old < 12:<br>
+    ⠀⠀⠀print('"Марсианин"')<br>
+ 	<br>
+	if 12 <= old < 16:<br>
+    ⠀⠀⠀print('"Загадочный остров"')<br>
+ 	<br>
+	if 16 <= old:<br>
+    ⠀⠀⠀print('"Поток сознания"')<br>
+
+    <img src="https://younglinux.info/sites/default/files/images/python/elif.png"><br>
+    <br>
+    Примечание. Названия фильмов выводятся на экран в двойных кавычках. Поэтому в программе для определения строк используются одинарные.<br>
+    <br>
+    Предложенный код прекрасно работает, но есть одно существенное "но". Он не эффективен, так как каждый if в нем – это отдельно взятый оператор, никак не связанный с другими if. Процессор тратит время и "нервы" на обработку каждого из них, даже если в этом уже нет необходимости. Например, введено число 10. В первом if логическое выражение возвращает ложь, и поток выполнения переходит ко второму if. Логическое выражение в его заголовке возвращает истину, и его тело выполняется. Всё, на этом программа должна была остановиться.<br>
+    <br>
+    Однако следующий if никак не связан с предыдущим, поэтому далее будет проверяться вхождение значения переменной old в диапазон от 12 до 16, в чем необходимости нет. И далее будет обрабатываться логическое выражение в последнем if, хотя уже понятно, что и там будет False. Что же делать?<br>
+    <br>
+    Ответом является вложение условных операторов друг в друга<br>
+    <b>Пример:</b><br>
+    old = int(input('Ваш возраст: '))<br>
+ 	
+	⠀⠀⠀print('Рекомендовано:', end=' ')<br>
+ 	<br>
+	if 3 <= old < 6:<br>
+    ⠀⠀⠀print('"Заяц в лабиринте"') <br>  
+	else:<br>
+    ⠀⠀⠀if 6 <= old < 12:<br>
+        ⠀⠀⠀print('"Марсианин"')<br>
+    else:<br>
+    ⠀⠀⠀if 12 <= old < 16:<br>
+        ⠀⠀⠀print('"Загадочный остров"')<br>
+        else:<br>
+        ⠀⠀⠀if 16 <= old:<br>
+            ⠀⠀⠀print('"Поток сознания"')<br>
+    <br>
+    Рассмотрим поток выполнения этого варианта кода. Сначала проверяется условие в первом if (он же самый внешний). Если здесь было получено True, то тело этого if выполняется, а в ветку else мы даже не заходим, так как она срабатывает только тогда, когда в условии if возникает ложь.<br>
+    <br>
+    Если внешний if вернул False, поток выполнения программы заходит в соответствующий ему внешний else. В его теле находится другой if со своим else. Если введенное число попадает в диапазон от 6 до 12, то выполнится тело вложенного if, после чего программа завершается. Если же число не попадает в диапазон от 6 до 12, то произойдет переход к ветке else. В ее теле находится свой условный оператор, имеющий уже третий уровень вложенности.<br>
+    <br>
+    Таким образом до последней проверки (16 <= old) интерпретатор доходит только тогда, когда все предыдущие возвращают False. Если же по ходу выполнения программы возникает True, то все последующие проверки опускаются, что экономит ресурсы процессора. Кроме того, такая логика выполнения программы более правильная.<br>
+
+    <h1>6.Цикл while - цикл с условием</h1>
+    <b>Циклы</b> — это инструкции, выполняющие одну и туже последовательность действий,
+	пока действует заданное условие.<br>
+	<br>
+	В реальной жизни мы довольно часто сталкиваемся с циклами. Например, ходьба
+	человека — вполне циклическое явление: шаг левой, шаг правой, снова левой-правой
+	и т.д., пока не будет достигнута определенная цель (например, школа или магазин). В
+	компьютерных программах наряду с инструкциями ветвлениями (т.е. выбором пути
+	действия) также существуют инструкции циклов (повторения действия). Если бы
+	инструкций цикла не существовало, пришлось бы много раз вставлять в программу
+	один и тот же код подряд столько раз, сколько нужно выполнить одинаковую
+	последовательность действий.<br>
+	<br>
+	Универсальным организатором цикла в языке программирования Python (как и во
+	многих других языках) является конструкция <b>while</b>. Слово <b>"while"</b> с английского
+	языка переводится как "пока" ("пока логическое выражение возвращает истину,
+	выполнять определенные операции").<br>
+	<img src="https://younglinux.info/sites/default/files/images/python/while2.png"><br>
+	<br>
+	Эту изменяемую переменную, которая используется в заголовке цикла <b>while</b>, обычно
+	называют счетчиком. Как и всякой переменной ей можно давать произвольные имена,
+	однако очень часто используют буквы i и j. Простейший цикл на языке
+	программирования Python может выглядеть так:
+	<b>Пример:</b><br>
+	str1 = "+"<br>
+	i = 0<br>
+	while i < 10:<br>
+	print (str1)<br>
+	i = i + 1<br>
+	<br>
+	В последней строчке кода происходит увеличение значения переменной i на единицу,
+	поэтому с каждым оборотом цикла ее значение увеличивается. Когда будет достигнуто
+	число 10, логическое выражение i < 10 даст ложный результат, выполнение тела
+	цикла будет прекращено, а поток выполнения программы перейдет на команды
+	следующие за всей конструкцией цикла. Результатом выполнения скрипта
+	приведенного выше является вывод на экран десяти знаков + в столбик. Если
+	увеличивать счетчик в теле цикла не на единицу, а на 2, то будет выведено только пять
+	знаков, т.к цикл сделает лишь пять оборотов.<br>
+	<br>
+	Более сложный пример с использованием цикла:<br>
+	<b>Пример:</b>
+	fib1 = 0<br>
+	fib2 = 1<br>
+	print (fib1)<br>
+	print (fib2)<br>
+	n = 10<br>
+	i = 0<br>
+	while i < n:<br>
+	fib_sum = fib1 + fib2<br>
+	print (fib_sum)<br>
+	fib1 = fib2<br>
+	fib2 = fib_sum<br>
+	i = i + 1<br>
+
+	<h1>7.Арифметическйи цикл for</h1><br>
+	В "Цикл while - цикл с условием" был рассмотрен цикл <b>while</b>. Однако это не единственный способ
+	организации в языке Python повторения группы выражений. В программах,
+	написанных на Питоне, широко применяется цикл for, который представляет собой
+	цикл обхода заданного множества элементов (символов строки, объектов списка или
+	словаря) и выполнения в своем теле различных операций над ними. Например, если
+	имеется список чисел, и необходимо увеличить значение каждого элемента на две
+	единицы, то можно перебрать список с помощью цикла <b>for</b>, выполнив над каждым его
+	элементом соответствующее действие. <br>
+	<b>Пример:</b>
+	>>> spisok = [0,10,20,30,40,50,60,70,80,90]<br>
+	>>> i = 0<br>
+	>>> for element in spisok:<br>
+	spisok[i] = element + 2<br>
+	i = i + 1<br>
+	>>> spisok<br>
+	[2, 12, 22, 32, 42, 52, 62, 72, 82, 92]<br>
+	<br>
+	В примере переменная i нужна для того, чтобы записать изменившееся значение
+	элемента в список. В ней хранится значение индекса очередного элемента списка. В
+	то время, как переменная element связывается со значением очередного элемента
+	данных. В заголовке цикла <b>for</b> происходит обращение очередному элементу списка. В
+	теле цикла элементу с индексом i присваивается сумма значения текущего
+	(обрабатываемого) элемента и двойки. Далее индекс увеличивается на единицу, а
+	поток выполнения программы переходит снова в заголовок цикла <b>for</b>, где происходит
+	обращение к следующему элементу списка. Когда все элементы обработаны цикл for
+	заканчивает свою работу. Отсутствие очередного элемента является условием
+	завершения работы цикла for (для сравнения: в цикле <b>while</b> условием завершения
+	служит результат <b>false</b> логического выражения в заголовке). Еще один момент: если
+	счетчик не увеличивать на единицу (выражение i = i + 1), то не смотря на то, что все
+	элементы списка будут обработаны, результат все время будет присваиваться первому
+	элементу списка (с индексом 0).<br>
+	<br>
+	С таким же успехом перебирать можно и строки, если не пытаться их при этом
+    изменять:<br>
+	<b>Пример:</b><br>
+	>>> stroka = "привет"<br>
+	>>> for bukva in stroka:<br>
+	print(bukva, end=' * ')<br>
+	<br>
+	п * р * и * в * е * т * <br>
+	<h1>8.Функции, оператор def</h1>
+	Функция в python - объект, принимающий аргументы и возвращающий значение. Обычно функция определяется с помощью инструкции <b>def</b>.<br>
+	<br>
+	Определим простейшую функцию:<br>
+	<b>Пример:</b><br>
+	def add(x, y):<br>
+    ⠀⠀⠀return x + y<br>
+    <br>
+    Инструкция <b>return</b> говорит, что нужно вернуть значение. В нашем случае функция возвращает сумму x и y.<br>
+    <br>
+    Теперь мы ее можем вызвать:<br>
+    <b>Пример:</b><br>
+    >>  add(1, 10)<br>
+	11<br>
+	>>  add('abc', 'def')<br>
+	'abcdef'<br>
+	<br>
+	Функция может быть любой сложности и возвращать любые объекты (списки, кортежи, и даже функции!):<br>
+	<b>Пример:</b><br>
+	>>  def newfunc(n):<br>
+	..      def myfunc(x):<br>
+	..          return x + n<br>
+	..      return myfunc<br>
+	.. <br>
+	>>  new = newfunc(100)  # new - это функция<br>
+	>>  new(200)<br>
+	300<br>
+	<br>
+	<img src="data:image/png;base64,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"><br>
+	Функция может и не заканчиваться инструкцией return, при этом функция вернет значение None:<br>
+	<b>Пример:</b><br>
+	>>  def func():<br>
+	..      pass<br>
+	.. <br>
+	>>  print(func())<br>
+	None<br>
+	<br>
+
+	<h1>9.Классы и объекты</h1>
+	Объектно-ориентированное программирование (ООП) — парадигма программирования, в которой основными концепциями являются понятия объектов и классов.<br>
+	<b>Класс</b> — тип, описывающий устройство объектов.<br>
+	<b>Объект</b> — это экземпляр класса. Класс можно сравнить с чертежом, по которому создаются объекты.<br>
+	Python соответствует принципам объектно-ориентированного программирования. В python всё является объектами - и строки, и списки, и словари, и всё остальное.<br>
+	<br>
+	Но возможности ООП в python этим не ограничены. Программист может написать свой тип данных (класс), определить в нём свои методы.<br>
+	<br>
+	Это не является обязательным - мы можем пользоваться только встроенными объектами. Однако ООП полезно при долгосрочной разработке программы несколькими людьми, так как упрощает понимание кода.<br>
+	<br>
+	Приступим теперь собственно к написанию своих классов на python. Попробуем определить собственный класс:<br>
+	<b>Пример:</b><br>
+	>>> # Пример простейшего класса, который ничего не делает<br>
+	... class A:<br>
+	...     pass<br>
+	<br>
+	Теперь мы можем создать несколько экземпляров этого класса:<br>
+	<b>Пример:</b><br>
+	>>> a = A()<br>
+	>>> b = A()<br>
+	>>> a.arg = 1  # у экземпляра a появился атрибут arg, равный 1<br>
+	>>> b.arg = 2  # а у экземпляра b - атрибут arg, равный 2<br>
+	>>> print(a.arg)<br>
+	1<br>
+	>>> print(b.arg)<br>
+	2<br>
+	>>> c = A()<br>
+	>>> print(c.arg)  # а у этого экземпляра нет arg<br>
+	Traceback (most recent call last):<br>
+	  File "<stdin>", line 1, in <module><br>
+	AttributeError: 'A' object has no attribute 'arg'<br>
+	<br>
+	Классу возможно задать собственные методы:<br>
+	<b>Пример:</b>
+	>>> class A:<br>
+	...     def g(self): # self - обязательный аргумент, содержащий в себе экземпляр<br>
+	...                  # класса, передающийся при вызове метода,<br>
+	...                  # поэтому этот аргумент должен присутствовать<br>
+	...                  # во всех методах класса.<br>
+	...         return 'hello world'<br>
+	...<br>
+	>>> a = A()<br>
+	>>> a.g()<br>
+	'hello world'<br>
+	
+	<h1>10.Cписки</h1>
+	Списки в языке программирования Python, как и строки, являются упорядоченными
+	последовательностями. Однако, в отличии от строк, списки состоят не из символов, а
+	из различных объектов (значений, данных), и заключаются не в кавычки, а в
+	квадратные скобки [ ]. Объекты отделяются друг от друга с помощью запятой.<br>
+	<br>
+	Списки могут состоять из различных объектов: чисел, строк и даже других списков. В
+	последнем случае, списки называют вложенными.<br>
+	[23, 656, -20, 67, -45] # список целых чисел<br>
+	[4.15, 5.93, 6.45, 9.3, 10.0, 11.6] # список из дробных чисел<br>
+	["Katy", "Sergei", "Oleg", "Dasha"] # список из строк<br>
+	["Москва", "Титова", 12, 148] # смешанный список<br>
+	[[0, 0, 0], [0, 0, 1], [0, 1, 0]] # список, состоящий из списков<br>
+	<br>
+	Как и над строками над списками можно выполнять операции соединения и
+	повторения:<br>
+	>>>  [45, -12, 'april'] + [21, 48.5, 33]<br>
+	[45, -12, 'april', 21, 48.5, 33]<br>
+	>>>  [[0,0],[0,1],[1,1]] * 2<br>
+	[[0, 0], [0, 1], [1, 1], [0, 0], [0, 1], [1, 1]]<br>
+	>>> <br>
+	<br>
+	По аналогии с символами строк, можно получать доступ к объектам списка по их
+	индексам, извлекать срезы, измерять длину списка:<br>
+	>>> li = ['a','b','c','d','e','f']<br>
+	>>> len(li)<br>
+	6<br>
+	>>> li[0]<br>
+	'a'<br>
+	>>> li[4]<br>
+	'e'<br>
+	>>> li[0:3]<br>
+	['a', 'b', 'c']<br>
+	>>> li[3:]<br>
+	['d', 'e', 'f']<br>
+	>>> <br>
+	<br>
+	В списке можно заменить целый срез:<br>
+	>>> mylist[0:2] = [10,20]<br>
+	>>> mylist<br>
+	[10, 20, 'ka', 'da', 'bra']<br>
+	>>> <br>
+	<br>
+	Более сложная ситуация:<br>
+	>>> alist = mylist[0:2] + [100,'it is ',200] + mylist[2:] # новый список<br>
+	>>> a2list = mylist # создается вторая ссылка-переменная на первый список<br>
+	>>> alist<br>
+	[10, 20, 100, 'it is ', 200, 'ka', 'da', 'bra']<br>
+	>>> a2list<br>
+	[10, 20, 'ka', 'da', 'bra']<br>
+	>>> a2list[0] = '!!!' # изменяем список<br>
+	>>> a2list<br>
+	['!!!', 20, 'ka', 'da', 'bra']<br>
+	>>> mylist # обе переменные связаны с одним списком<br>
+	['!!!', 20, 'ka', 'da', 'bra']<br>
+
+
+	<h1>11.Словари</h1>
+	Одним из сложных типов данных (наряду со строками и списками) в языке
+	программирования Python являются словари. Словарь - это <b>изменяемый</b> (как список)
+	<b>неупорядоченный</b> (в отличие от строк и списков) набор пар "ключ:значение".<br>
+	<br>
+	Чтобы представление о словаре стало более понятным, можно провести аналогию с
+	обычным словарем, например, англо-русским. На каждое английское слово в таком
+	словаре есть русское слово-перевод: cat – кошка, dog – собака, table – стол и т.д. Если
+	англо-русский словарь описывать с помощью Python, то английские слова будут
+	ключами, а русские — их значениями:
+	{'cat':'кошка', 'dog':'собака', 'bird':'птица', 'mouse':'мышь'}<br>
+	<br>
+	Если создать словарь в интерпретаторе Python, то после нажатия Enter можно
+	наблюдать, что последовательность вывода пар "ключ:значение" не совпадает с тем,
+	как было введено:<br>
+	>>> {'cat':'кошка', 'dog':'собака', 'bird':'птица', 'mouse':'мышь'}<br>
+	{'bird': 'птица', 'mouse': 'мышь', 'dog': 'собака', 'cat': 'кошка'}<br>
+	>>> <br>
+	<br>
+	Дело в том, что в словаре абсолютно не важен порядок пар, и интерпретатор выводит
+	их в случайном порядке. Тогда как же получить доступ к определенному элементу,
+	если индексация не возможна в принципе? Ответ: в словаре доступ к значениям
+	осуществляется по ключам, которые заключаются в квадратные скобки (по аналогии с
+	индексами строк и списков).<br>
+	>>> dic ={'cat':'кошка','dog':'собака','bird':'птица','mouse':'мышь'}<br>
+	>>> dic['cat']<br>
+	'кошка'<br>
+	>>> dic['bird']<br>
+	'птица'<br>
+	>>> <br>
+	Словари, как и списки, являются изменяемым типом данных: можно изменять,
+	добавлять и удалять элементы (пары "ключ:значение"). Изначально словарь можно
+	создать пустым (например, d = {}) и лишь потом заполнить его элементами.
+	Добавление и изменение имеет одинаковый синтаксис: словарь[ключ] = значение.
+	Ключ может быть как уже существующим (тогда происходит изменение значения), так
+	и новым (происходит добавление элемента словаря). Удаление элемента словаря
+	осуществляется с помощью функции <b>del()</b>.<br>
+	>>> dic ={'cat':'кошка','dog':'собака','bird':'птица','mouse':'мышь'}<br>
+	>>> dic['elephant'] = 'бегемот'<br>
+	>>> dic['fox'] = 'лиса'<br>
+	>>> dic<br>
+	{'fox': 'лиса', 'dog': 'собака', 'cat': 'кошка', 'elephant': 'бегемот', 'mouse': 'мышь',
+	'bird': 'птица'}<br>
+	>>> dic['elephant'] = 'слон'<br>
+	>>> del(dic['bird'])<br>
+	>>> dic<br>
+	{'fox': 'лиса', 'dog': 'собака', 'cat': 'кошка', 'elephant': 'слон', 'mouse': 'мышь'}<br>
+	>>> <br>
+	<br>
+	Тип данных ключей и значений словарей не обязательно должны быть строками.
+	Значения словарей могут быть более сложными (содержать структуры данных,
+	например, другие словари или списки).<br>
+	>>> d = {1:'one',2:'two',3:'three'}<br>
+	>>> d<br>
+	{1: 'one', 2: 'two', 3: 'three'}<br>
+	>>> d = {10:[3,2,8], 100:[1,10,5], 1000:[23,1,5]}<br>
+	>>> d<br>
+	{1000: [23, 1, 5], 10: [3, 2, 8], 100: [1, 10, 5]}<br>
+	>>> d = {1.1:2, 1.2:0, 1.3:8}<br>
+	>>> d<br>
+	{1.3: 8, 1.2: 0, 1.1: 2}<br>
+	>>> d = {1.1:2, 10:'apple', 'box':100}<br>
+	>>> d<br>
+	{'box': 100, 10: 'apple', 1.1: 2}<br>
+	>>> <br>
+
+
+
+
+</body>
+
+
+
+</html>
